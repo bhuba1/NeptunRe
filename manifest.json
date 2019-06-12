@@ -1,0 +1,42 @@
+{
+
+	"manifest_version": 2,
+	"name": "NeptunRe",
+	"version": "1.5.2",
+
+  	"description": "Neptun refresher",
+  	
+	"icons": 
+		{
+			"48": "neptun.png"
+		},
+	"permissions": [
+    	"activeTab",
+    	"bookmarks",
+    	"tabs",
+    	"storage"
+  	],
+	"browser_action": {
+	    "default_icon": "neptun.png",
+	    "default_title": "Made By Bhuba",
+	    "default_popup": "popup.html"
+	  },
+	"background": {
+    	"scripts": ["background.js"]
+  	},
+	"content_scripts": [
+	{
+	  "matches": 
+	  [
+	  	"*://*.neptun.u-szeged.hu/*",
+	  	"*://*.neptun.elte.hu/*",
+	  	"*://*.neptun.bme.hu/*",
+	  	"*://*.neptun3r.web.uni-corvinus.hu/*",
+	  	"*://*.neptun3.uni-bge.hu/*",
+	  	"*://*.neptun.unideb.hu/*"
+	  ],
+	  "js": ["main.js"]
+	}
+	]
+
+}
